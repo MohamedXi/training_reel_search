@@ -12,7 +12,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
  */
 export const RoutesWrapper: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/training_reel_search">
       <Routes>
         {routes.map((route, index) => (
           <Route key={index} path={route.path} element={route.element} />
