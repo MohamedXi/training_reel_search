@@ -1,5 +1,6 @@
 import React from 'react';
 import { APP_NAME } from '../../core/constants';
+import { ERoutePaths } from '../../core/enums';
 import { ThemeSwitcher } from '../ThemeShwitcher/ThemeSwitcher';
 
 /**
@@ -10,7 +11,9 @@ import { ThemeSwitcher } from '../ThemeShwitcher/ThemeSwitcher';
 export const Header = (): React.ReactElement => {
   return (
     <header className="fixed top-0 w-full bg-background py-4 flex justify-between items-center px-4 md:px-8 z-50" data-testid="header">
-      <div className="text-xl font-bold">{APP_NAME}</div>
+      <a href={ERoutePaths.HOME}>
+        <div className="text-xl font-bold">{APP_NAME}</div>
+      </a>
       <div>
         <ThemeSwitcher />
       </div>

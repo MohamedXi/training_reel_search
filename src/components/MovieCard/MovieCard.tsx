@@ -24,7 +24,7 @@ export const MovieCard = ({ movie }: { movie: IMappedMovie }): React.ReactElemen
       <div className="relative">
         <Link to={`/movie/${movie.id}`}>
           <img src={`https://image.tmdb.org/t/p/w500${movie.posterImage}`} alt={movie.title} className="w-full h-auto" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
         </Link>
 
         <button
