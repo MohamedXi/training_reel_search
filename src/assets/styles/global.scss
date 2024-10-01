@@ -1,0 +1,11 @@
+// IMPORTS GLOBAL STYLES
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './colors.scss';
+@import './fonts.scss';
+@import './local.scss';
+@import './mixins.scss';
+@import './typography.scss';
+@import './variables.scss';

@@ -1,0 +1,18 @@
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --secondary: #f3f4f6;
+  --secondary-dark: #4b5563;
+  --background: #ffffff;
+  --background-dark: #1f2937;
+  --text-primary: #000000;
+  --text-primary-dark: #ffffff;
+}
+
+.dark {
+  --background: var(--background-dark);
+  --background-secondary: var(--secondary-dark);
+  --text-primary: var(--text-primary-dark);
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+}
