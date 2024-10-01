@@ -43,6 +43,7 @@ export const ThemeSwitcher = (): React.ReactElement => {
 
   return (
     <Switch
+      data-testid="theme-switcher"
       checked={enabled}
       onChange={handleThemeChange}
       className={classNames(

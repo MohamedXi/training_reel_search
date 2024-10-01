@@ -27,7 +27,7 @@ export default function Home(): React.ReactElement {
       }
     };
 
-    fetchMovies().then(() => console.log('Movies fetched!'));
+    fetchMovies();
   }, [searchQuery]);
 
   /**

@@ -17,7 +17,10 @@ export const MovieCard = ({ movie }: { movie: IMappedMovie }): React.ReactElemen
   const isFavorite = favorites.some((favMovie) => favMovie.id === movie.id);
 
   return (
-    <div className="flex flex-col rounded-lg shadow-lg overflow-hidden bg-background transition-transform transform hover:scale-105 hover:shadow-xl duration-300 relative">
+    <div
+      className="flex flex-col rounded-lg shadow-lg overflow-hidden bg-background transition-transform transform hover:scale-105 hover:shadow-xl duration-300 relative"
+      data-testid="movie-card"
+    >
       <div className="relative">
         <Link to={`/movie/${movie.id}`}>
           <img src={`https://image.tmdb.org/t/p/w500${movie.posterImage}`} alt={movie.title} className="w-full h-auto" />
@@ -27,6 +30,7 @@ export const MovieCard = ({ movie }: { movie: IMappedMovie }): React.ReactElemen
         <button
           onClick={() => (isFavorite ? removeFavorite(movie.id) : addFavorite(movie))}
           className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md transition-colors duration-300"
+          data-testid="favorite-button"
         >
           <HeartIcon className={`h-6 w-6 ${isFavorite ? 'text-red-700' : 'text-gray-400'}`} />
         </button>
