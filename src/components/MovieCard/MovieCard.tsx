@@ -1,6 +1,14 @@
+import React from 'react';
 import { IMappedMovie } from '../../core/interfaces';
 
-export const MovieCard = ({ movie }: { movie: IMappedMovie }) => {
+/**
+ * MovieCard component displays a movie's poster, title, and release date.
+ *
+ * @param {Object} props - The props for the MovieCard component.
+ * @param {IMappedMovie} props.movie - The movie object containing details to display.
+ * @returns {React.Element} The rendered MovieCard component.
+ */
+export const MovieCard = ({ movie }: { movie: IMappedMovie }): React.ReactElement => {
   return (
     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden bg-background transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
       <div className="relative">

@@ -1,19 +1,36 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import React, { useState } from 'react';
 
+/**
+ * Props for the SearchBar component.
+ * @typedef {Object} SearchBarProps
+ * @property {function(string): void} onSearch - Callback function to handle the search query.
+ */
 type SearchBarProps = {
   onSearch: (query: string) => void;
 };
 
-export const SearchBar = ({ onSearch }: SearchBarProps) => {
+/**
+ * SearchBar component allows users to input a search query and trigger a search action.
+ *
+ * @param {SearchBarProps} props - The props for the SearchBar component.
+ * @returns {React.ReactElement} The SearchBar component.
+ */
+export const SearchBar = ({ onSearch }: SearchBarProps): React.ReactElement => {
   const [query, setQuery] = useState('');
 
+  /**
+   * Handles the search action by invoking the onSearch callback with the current query.
+   */
   const handleSearch = () => {
-    if (query.trim()) {
-      onSearch(query);
-    }
+    onSearch(query);
   };
 
+  /**
+   * Handles the key down event to trigger the search when the Enter key is pressed.
+   *
+   * @param {React.KeyboardEvent<HTMLInputElement>} e - The keyboard event.
+   */
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       handleSearch();
