@@ -1,6 +1,6 @@
+import routes from '@/core/route/routes';
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import routes from '../../core/route/routes';
 
 /**
  * RoutesWrapper component is responsible for wrapping the application's routes

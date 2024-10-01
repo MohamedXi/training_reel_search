@@ -1,8 +1,8 @@
+import { useFavorites } from '@/core/hooks';
+import { IMappedMovie } from '@/core/interfaces';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
-import { useFavorites } from '../../core/hooks';
-import { IMappedMovie } from '../../core/interfaces';
 import { MovieCard } from './MovieCard';
 
 vi.mock('../../core/hooks', () => ({

@@ -1,6 +1,6 @@
+import { APP_NAME } from '@/core/constants';
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { APP_NAME } from '../../core/constants';
 import { Header } from './Header';
 
 describe('Header component', () => {

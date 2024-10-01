@@ -1,7 +1,7 @@
+import { MovieCard, SearchBar } from '@/components';
+import { useTheMovieService } from '@/core/hooks';
+import { IMappedMovie } from '@/core/interfaces';
 import React, { useEffect, useState } from 'react';
-import { MovieCard, SearchBar } from '../components';
-import { useTheMovieService } from '../core/hooks/useTheMovieService';
-import { IMappedMovie } from '../core/interfaces';
 
 /**
  * Home component that displays the main page with a search bar and a list of movies.

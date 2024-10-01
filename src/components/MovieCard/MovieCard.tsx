@@ -1,8 +1,8 @@
+import { useFavorites } from '@/core/hooks';
+import { IMappedMovie } from '@/core/interfaces';
 import { HeartIcon } from '@heroicons/react/16/solid';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useFavorites } from '../../core/hooks';
-import { IMappedMovie } from '../../core/interfaces';
 
 /**
  * MovieCard component displays a movie's poster, title, and release date.

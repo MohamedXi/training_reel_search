@@ -1,7 +1,7 @@
+import { ThemeSwitcher } from '@/components';
+import { APP_NAME } from '@/core/constants';
+import { ERoutePaths } from '@/core/enums';
 import React from 'react';
-import { APP_NAME } from '../../core/constants';
-import { ERoutePaths } from '../../core/enums';
-import { ThemeSwitcher } from '../ThemeShwitcher/ThemeSwitcher';
 
 /**
  * Header component that displays the top navigation bar with a title and a theme switcher.

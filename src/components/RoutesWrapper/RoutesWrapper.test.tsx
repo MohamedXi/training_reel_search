@@ -1,6 +1,6 @@
+import routes from '@/core/route/routes';
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import routes from '../../core/route/routes';
 import { RoutesWrapper } from './RoutesWrapper';
 
 describe('RoutesWrapper', () => {

@@ -1,9 +1,8 @@
+import { useFavorites, useTheMovieService } from '@/core/hooks';
+import { IMappedMovieDetail } from '@/core/interfaces';
 import { HeartIcon } from '@heroicons/react/24/solid';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useFavorites } from '../core/hooks';
-import { useTheMovieService } from '../core/hooks/useTheMovieService';
-import { IMappedMovieDetail } from '../core/interfaces';
 
 export default function MovieDetails() {
   const { id } = useParams();

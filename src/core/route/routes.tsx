@@ -1,4 +1,4 @@
-import { Home, MovieDetails } from '../../pages';
+import { Home, MovieDetails } from '@/pages';
 import { ERoutePaths } from '../enums';
 import { TRoutePage } from '../types';
 

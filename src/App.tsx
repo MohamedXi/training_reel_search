@@ -1,5 +1,5 @@
+import { Header, RoutesWrapper } from '@/components';
 import React from 'react';
-import { Header, RoutesWrapper } from './components';
 import { FavoriteProvider } from './core/context';
 
 /**
