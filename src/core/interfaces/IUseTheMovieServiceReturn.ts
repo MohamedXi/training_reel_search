@@ -1,5 +1,6 @@
-import { IMappedMovie } from "./IMappedMovie";
-import { IGenreResponse } from "./IGenreResponse";
+import { IGenreResponse } from './IGenreResponse';
+import { IMappedMovie } from './IMappedMovie';
+import { IMappedMovieDetail } from './IMappedMovieDetail';
 
 /**
  * Hook return type
@@ -17,7 +18,7 @@ export interface IUseTheMovieServiceReturn {
    * @param {number} id - Movie ID
    * @returns {Promise<any>}
    */
-  getMovieDetails: (id: number) => Promise<IMappedMovie>;
+  getMovieDetails: (id: number) => Promise<IMappedMovieDetail>;
 
   /**
    * Get TV shows genres
@@ -29,5 +30,5 @@ export interface IUseTheMovieServiceReturn {
    * Get movies genres
    * @returns {Promise<any>}
    */
-  getMoviesGenres: () => Promise<IGenreResponse>;
+  getMoviesGenres: () => Promise<IGenreResponse[]>;
 }

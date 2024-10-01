@@ -1,1 +1,2 @@
-export * from "./TFavoriteContext";
+export * from './TFavoriteContext';
+export * from './TRoutePage';

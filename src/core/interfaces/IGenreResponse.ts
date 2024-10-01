@@ -1,4 +1,4 @@
-import { IGenre } from "./IGenre";
+import { IGenre } from './IGenre';
 
 export interface IGenreResponse {
   genres: IGenre[];

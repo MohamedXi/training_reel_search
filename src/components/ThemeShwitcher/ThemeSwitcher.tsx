@@ -1,15 +1,29 @@
 import { Switch } from '@headlessui/react';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
-function classNames(...classes: string[]) {
+/**
+ * Utility function to join class names conditionally.
+ *
+ * @param {...string} classes - The class names to join.
+ * @returns {string} The joined class names.
+ */
+function classNames(...classes: string[]): string {
   return classes.filter(Boolean).join(' ');
 }
 
-export const ThemeSwitcher = () => {
+/**
+ * ThemeSwitcher component that allows users to toggle between light and dark themes.
+ *
+ * @returns {React.ReactElement} The rendered ThemeSwitcher component.
+ */
+export const ThemeSwitcher = (): React.ReactElement => {
   const [theme, setTheme] = useLocalStorage('theme', 'light');
 
+  /**
+   * Effect to update the document's class based on the selected theme.
+   */
   useEffect(() => {
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
@@ -17,6 +31,11 @@ export const ThemeSwitcher = () => {
 
   const [enabled, setEnabled] = useState(theme === 'dark');
 
+  /**
+   * Handles the theme change by updating the theme state and local storage.
+   *
+   * @param {boolean} enabled - Whether the dark theme is enabled.
+   */
   const handleThemeChange = (enabled: boolean) => {
     setTheme(enabled ? 'dark' : 'light');
     setEnabled(enabled);

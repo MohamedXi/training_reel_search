@@ -1,7 +1,7 @@
-import { IMappedMovie } from "../interfaces";
+import { IMappedMovie, IMappedMovieDetail } from '../interfaces';
 
 export type TFavoriteContext = {
-  favorites: IMappedMovie[];
-  addFavorite: (movie: IMappedMovie) => void;
+  favorites: (IMappedMovie | IMappedMovieDetail)[];
+  addFavorite: (movie: IMappedMovie | IMappedMovieDetail) => void;
   removeFavorite: (movieId: number) => void;
 };

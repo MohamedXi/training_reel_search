@@ -1,7 +1,6 @@
 import React from 'react';
-import { Header } from './components';
+import { Header, RoutesWrapper } from './components';
 import { FavoriteProvider } from './core/context';
-import Home from './pages/Home';
 
 /**
  * The main App component that serves as the root of the application.
@@ -13,7 +12,7 @@ export default function App(): React.ReactElement {
     <FavoriteProvider>
       <Header key="header" />
       <main className="pt-16">
-        <Home key="home" />
+        <RoutesWrapper key="routes" />
       </main>
     </FavoriteProvider>
   );

@@ -10,6 +10,7 @@ import { IMappedMovie } from '../core/interfaces';
  */
 export default function Home(): React.ReactElement {
   const { searchMovies } = useTheMovieService();
+
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [movies, setMovies] = useState<IMappedMovie[]>([]);
 
