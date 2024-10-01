@@ -2,9 +2,11 @@ import { useFavorites, useTheMovieService } from '@/core/hooks';
 import { IMappedMovieDetail } from '@/core/interfaces';
 import { HeartIcon } from '@heroicons/react/24/solid';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export default function MovieDetails() {
+  const navigate = useNavigate();
+
   const { id } = useParams();
   const { getMovieDetails } = useTheMovieService();
   const { addFavorite, removeFavorite, favorites } = useFavorites();
@@ -20,6 +22,10 @@ export default function MovieDetails() {
     fetchMovieDetails();
   }, [id]);
 
+  const handleBack = () => {
+    navigate(-1);
+  };
+
   if (!movie) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -32,7 +38,12 @@ export default function MovieDetails() {
 
   return (
     <div className="min-h-screen bg-background text-text-primary p-6">
-      <div className="max-w-screen-lg mx-auto flex flex-col lg:flex-row items-start gap-8">
+      <div className="container mx-auto flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-6 max-w-6xl">
+        <button className="rounded-full bg-gray-800 text-white p-2 w-8 h-8 flex items-center justify-center" onClick={handleBack}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+        </button>
         <div className="w-full lg:w-1/3">
           <img src={`https://image.tmdb.org/t/p/w500${movie.posterImage}`} alt={movie.title} className="w-full h-auto rounded-lg shadow-lg" />
         </div>
