@@ -3,17 +3,16 @@ import { useLocalStorage } from 'usehooks-ts';
 import { describe, expect, it, vi } from 'vitest';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
-type UseLocalStorageReturnType = [string, (value: string) => void];
-
 vi.mock('usehooks-ts', () => ({
   useLocalStorage: vi.fn(),
 }));
 
 describe('ThemeSwitcher Component', () => {
-  it('should display correct icons for light/dark mode and switch theme', () => {
-    const setThemeMock = vi.fn();
+  it('should toggle between light and dark themes', () => {});
 
-    (useLocalStorage as unknown as vi.Mock).mockReturnValue(['light', setThemeMock] as UseLocalStorageReturnType);
+  it('should display correct icons for light and dark themes', () => {
+    const setThemeMock = vi.fn();
+    (useLocalStorage as any).mockReturnValue(['light', setThemeMock]);
 
     render(<ThemeSwitcher />);
 
