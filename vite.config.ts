@@ -3,7 +3,7 @@ import path from 'path';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  base: './',
+  base: '/training_reel_search/',
   plugins: [react()],
   resolve: {
     alias: {
