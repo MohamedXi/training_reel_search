@@ -122,11 +122,9 @@ table {
 input {
   font-size: 100%;
   box-shadow: none;
-  -o-box-shadow: none;
-  -ms-box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* For Safari and Chrome */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* Standard property */
 
   &[type='text'],
   &[type='number'],
@@ -187,10 +185,10 @@ body {
   color: var(--text-primary);
   font-size: 16px;
   font-weight: 400;
-  background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
   background: var(--background);
-  // min-height: -webkit-fill-available;
+  background-attachment: fixed;
+  min-height: -webkit-fill-available;
 
   @media (max-width: 1256px) {
     &::-webkit-scrollbar {

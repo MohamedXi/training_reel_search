@@ -1,0 +1,6 @@
+export * from "./IUseTheMovieServiceReturn"
+export * from "./IMovieResponse"
+export * from "./IMovie"
+export * from "./IMappedMovie"
+export * from "./IGenreResponse"
+export * from "./IGenre"
